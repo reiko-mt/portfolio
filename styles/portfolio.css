@@ -1,7 +1,10 @@
 @charset "utf-8";
 /* Global Styles */
 a:hover {
-	color: rgba(255,255,255,1.00);
+	color: rgba(252,204,190,1.00);
+}
+body {
+  background-color: rgba(255,248,244,1.00);
 }
 /*header*/
 header {
@@ -10,43 +13,28 @@ header {
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
-}
-/* Logo placeholder*/
-#logo {
-	float: left;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	width: 139px;
-	text-align: center;
-	color: rgba(255,255,255,1.00);
-	background-color: rgba(190,190,190,1.00);
-}
-/* div for Links in header */
-#headerLinks {
-	float: left;
-	width: calc( 100% - 139px );
-	text-align: right;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background-color: rgba(255,255,255,1.00);
-}
-/* Links in header */
-#headerLinks a {
-	text-decoration: none;
-	color: rgba(146,146,146,1.00);
-	padding-left: 66px;
-	font-size: 14px;
-}
-/* Offer text banner*/
-#offer {
-	font-family: 'Montserrat', sans-serif;
-	clear: both;
-	background-color: rgba(246,246,246,1.00);
-	color: rgba(146,146,146,1.00);
-	padding-left: 115px;
 	padding-top: 57px;
 	padding-bottom: 57px;
 }
+
+ /* index page introduction note */
+h3 {padding-top: 36px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	color: rgba(146,146,146,1.00);}
+
+#content .about_text{
+	font-family: Helvetica;
+	text-align: left;
+	font-size: 16px;
+	font-style: notmal;
+	color: rgba(74,74,74,1.00);
+	padding-top: 57px;
+}
+
 /* Main content of the site */
 #content {
 	clear: both;
@@ -62,7 +50,7 @@ header {
 	padding-left: 3%;
 	padding-right: 3%;
 	text-align: center;
-	background-color: rgba(246,246,246,1.00);
+	background-color: rgba(246,246,246,0);
 	padding-top: 36px;
 	height: 784px;
 }
@@ -80,41 +68,41 @@ header {
 	position: relative;
 	left: 0%;
 }
-/* Search field in sidebar */
-#content .sidebar #search {
-	width: 100%;
-	border-radius: 0px;
-	height: 42px;
-	text-align: center;
-	color: rgba(208,207,207,1.00);
-	font-size: 14px;
-	;
-	margin-bottom: 21px;
-}
 /* Whole page content */
 #mainWrapper {
 	width: 80%;
 	padding-left: 10%;
 }
 /*menu elements */
+.menu h2 a {
+	text-align: left;
+	color: rgba(146,146,146,1.00);
+	position: relative;
+	left: 0%;
+	text-decoration: none;
+	padding-top: 12px;
+}
 .menu ul li {
 	list-style-type: none;
 	font-size: x-large;
 	position: relative;
 	left: -35px;
-	padding-top: 12px;
+	padding-top: 2px;
 }
+
+
 /* Product rows for catalog */
 #content .mainContent .productRow {
 	overflow: auto;
 	color: rgba(146,146,146,1.00);
+	padding-top: 50px;
 }
 /* Each product Information in the catalog */
 .mainContent .productRow .productInfo {
 	float: left;
-	padding-left: 5%;
-	padding-right: 5%;
-	width: 22%;
+	padding-left: 1%;
+	padding-right: 1%;
+	width: 30%;
 }
 /* Prices of a products in catalog */
 .productRow .productInfo .price {
@@ -127,27 +115,16 @@ header {
 /* Content holder for products in catalog*/
 .productRow .productInfo .productContent {
 	position: relative;
-	top: -37px;
-	font-size: 14px;
+	top: -10px;
+	font-size: 12px;
 	font-family: source-sans-pro, sans-serif;
 	font-style: normal;
 	font-weight: 200;
-	color: rgba(146,146,146,1.00);
+	color: rgba(146,146,146,1);
 	white-space: pre-wrap;
 }
-/* Buy button for products in catalog */
-.productRow .productInfo .buyButton {
-	position: relative;
-	top: -48px;
-	width: 84%;
-	background-color: rgba(208,207,207,1.00);
-	height: 35px;
-	color: rgba(255,255,255,1.00);
-	border-style: none;
-	font-size: 14px;
-	text-transform: uppercase;
-	margin-top: 8px;
-}
+
+
 /* footer */
 #mainWrapper footer {
 	clear: both;
