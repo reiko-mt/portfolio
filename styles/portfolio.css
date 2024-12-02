@@ -17,7 +17,16 @@ header {
 	padding-bottom: 57px;
 	text-decoration: none;
 }
-
+h2 {
+	font-family: 'Montserrat', sans-serif;
+	color: rgba(146,146,146,1.00);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	padding-top: 57px;
+	padding-bottom: 57px;
+	text-decoration: none;
+}
  /* index page introduction note */
 h3 {padding-top: 36px;
 	text-align: center;
