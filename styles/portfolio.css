@@ -14,19 +14,10 @@ header {
 	font-style: normal;
 	font-weight: 400;
 	padding-top: 57px;
-	padding-bottom: 57px;
+	padding-bottom: 20px;
 	text-decoration: none;
 }
-h2 {
-	font-family: 'Montserrat', sans-serif;
-	color: rgba(146,146,146,1.00);
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	padding-top: 57px;
-	padding-bottom: 57px;
-	text-decoration: none;
-}
+
  /* index page introduction note */
 h3 {padding-top: 36px;
 	text-align: center;
@@ -49,7 +40,7 @@ h3 {padding-top: 36px;
 #content {
 	clear: both;
 	overflow: auto;
-	padding-top: 29px;
+	padding-top: 10px;
 }
 /* Sidebar */
 #content .sidebar {
@@ -69,7 +60,7 @@ h3 {padding-top: 36px;
 	float: left;
 	width: 70%;
 	text-align: center;
-	padding-left: 4%;
+	padding-left: 2%;
 }
 /*menubar's properties for menus in sidebar */
 #content .sidebar #menubar {
@@ -105,7 +96,7 @@ h3 {padding-top: 36px;
 #content .mainContent .productRow {
 	overflow: auto;
 	color: rgba(146,146,146,1.00);
-	padding-top: 50px;
+	padding-top: 10px;
 }
 /* Each product Information in the catalog */
 .mainContent .productRow .productInfo {
@@ -114,14 +105,13 @@ h3 {padding-top: 36px;
 	padding-right: 1%;
 	width: 30%;
 }
-/* Prices of a products in catalog */
-.productRow .productInfo .price {
-	font-family: 'Montserrat', sans-serif;
-	color: rgba(146,146,146,1.00);
-	font-size: 22px;
-	position: relative;
-	top: -20px;
+.mainContent .productRow .siimage {
+	float: left;
+	padding-left: 1%;
+	padding-right: 1%;
+	width: 48%;
 }
+
 /* Content holder for products in catalog*/
 .productRow .productInfo .productContent {
 	position: relative;
@@ -133,6 +123,18 @@ h3 {padding-top: 36px;
 	color: rgba(146,146,146,1);
 	white-space: pre-wrap;
 }
+
+.productRow .productInfo .siimageContent {
+	position: relative;
+	top: -10px;
+	font-size: 12px;
+	font-family: source-sans-pro, sans-serif;
+	font-style: normal;
+	font-weight: 200;
+	color: rgba(146,146,146,1);
+	white-space: pre-wrap;
+}
+
 
 
 /* footer */
@@ -150,24 +152,13 @@ h3 {padding-top: 36px;
 	padding-bottom: 22px;
 	padding-right: 22px;
 }
-/*Each footer content */
-#mainWrapper footer div {
-	width: 27%;
-	float: left;
-	padding-left: 4%;
-	padding-right: 2%;
-	color: rgba(255,255,255,1.00);
-	text-align: justify;
-}
-/* Links in footer */
-footer div a {
-	color: rgba(146,146,146,1.00);
-	display: block;
-	text-decoration: none;
-	text-align: center;
-}
+
 /* Product's images in catalog */
 .productInfo div img {
+	width: 100%;
+}
+
+.siimage div img {
 	width: 100%;
 }
 /*Links in sidebar */
@@ -268,47 +259,12 @@ footer .footerlinks {
 	width: 95%;
 	margin-top: 40px;
 }
-/* Prices of products in catalog view */
-.productRow .productInfo .price {
-	font-size: 19px;
-}
+
 /* Content holders in catalog view */
 .productRow .productInfo .productContent {
 	font-size: 16px;
 }
-/* Buy buttons in catalog view */
-.productRow .productInfo .buyButton {
-	font-size: 15px;
-}
-/* Container for links in footer */
-#mainWrapper footer .footerlinks {
-	float: none;
-	width: 100%;
-	position: relative;
-	top: 17px;
-	clear: both;
-	text-align: center;
-	left: 0%;
-	padding-bottom: 19px;
-}
-/* Container for each footer divisions */
-#mainWrapper footer div {
-	width: 44%;
-	text-align: justify;
-	font-size: 15px;
-}
-/* Links in footer */
-.footerlinks p a {
-	padding-top: 0px;
-	padding-bottom: 0px;
-	display: inline;
-	padding-right: 35px;
-}
-/* Footer region */
-#mainWrapper footer {
-	padding-left: 16px;
-	overflow: hidden;
-}
+
 /* Links in header */
 header #headerLinks a {
 	padding-left: 0px;
@@ -369,22 +325,13 @@ header #headerLinks a {
 	position: relative;
 	left: -2%;
 }
-#mainWrapper footer div {
-	width: 100%;
-	margin-left: -16px;
-	text-align: justify;
-	padding-bottom: 16px;
-	overflow: auto;
-}
+
 /* Unordered list for menu elements */
 .menu ul {
 	position: relative;
 	padding-left: 24%;
 }
-/* Container for links in footer */
-#mainWrapper footer .footerlinks {
-	padding-left: 8%;
-}
+
 /* Main content which excludes the sidebar */
 #mainwrapper #content .mainContent {
 	margin-top: -81px;
