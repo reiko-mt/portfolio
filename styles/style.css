@@ -65,6 +65,40 @@ footer {
   gap: 20px;
 }
 
+.gallery2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* vertical space between rows */
+}
+
+.row {
+  display: flex;
+  gap: 16px; /* space between images in a row */
+}
+/* First row: taller images */
+.row-large .portfolio-item img {
+  height: 300px; /* taller images */
+  width: auto;    /* keep aspect ratio */
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.row-medium .portfolio-item img {
+  height: 270px; /* shorter than first row */
+  width: auto;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.row-small .portfolio-item img {
+  height: 200px; /* shorter than first row */
+  width: auto;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
 .portfolio-item {
   position: relative;
   overflow: hidden;
