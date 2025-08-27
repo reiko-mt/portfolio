@@ -1,0 +1,124 @@
+/* ====== GLOBAL STYLES ====== */
+body {
+  font-family: Lato, sans-serif;
+  margin: 10px;
+  padding: 60px 50px;
+  background: #fafafa;
+  color: #475970;
+}
+
+
+/* ====== HEADER ====== */
+header {
+  font-family: Lato, sans-serif;
+  text-align: left;
+  font-size: 0.9em;
+  padding: 0px 50px; /* top-bottom left-right */
+  margin: 0px;
+}
+
+header h1 {
+  margin: 0px;
+  padding: 0px 0px;
+  font-size: 2.2em;
+  color: #475970; /* Dark blue-gray, change as you like */
+  font-weight: 900;
+}
+
+header p {
+  color: #5a6c82;
+  font-size: 1.1em;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.8rem;
+  color: #5a6c82;  /* subtle grey */
+}
+
+
+.intro {
+  font-family: Lato, sans-serif;
+  font-size: 1.0em;   /* smaller than normal text */
+  color: #7a8a99;     /* softer muted tone */
+  font-style: normal; /* optional, makes it feel light */
+  margin-top: 30px;    /* just a bit of breathing room */
+}
+
+#portfolio {
+  padding: 20px 50px;
+  text-align: left;
+}
+
+#portfolio h2 {
+  margin-bottom: 30px;
+  font-family: Lato, sans-serif;
+  font-size: 1.8em;
+  color: #475970;
+}
+
+/* ====== GALLERY GRID ====== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+.portfolio-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay text on hover */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.portfolio-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  margin: 0 0 5px;
+  font-size: 1.1em;
+}
+
+.overlay p {
+  margin: 0 0 10px;
+  font-size: 0.9em;
+}
+
+.overlay a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
