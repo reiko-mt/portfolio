@@ -23,18 +23,13 @@ header h1 {
   font-size: 2.2em;
   color: #475970; /* Dark blue-gray, change as you like */
   font-weight: 900;
+  letter-spacing: .5px;
 }
 
 header p {
   color: #5a6c82;
   font-size: 1.1em;
-}
-
-footer {
-  text-align: center;
-  padding: 20px 0;
-  font-size: 0.8rem;
-  color: #5a6c82;  /* subtle grey */
+  letter-spacing: .5px;
 }
 
 
@@ -43,7 +38,9 @@ footer {
   font-size: 1.0em;   /* smaller than normal text */
   color: #7a8a99;     /* softer muted tone */
   font-style: normal; /* optional, makes it feel light */
-  margin-top: 30px;    /* just a bit of breathing room */
+  margin-top: 10px;    /* just a bit of breathing room */
+  line-height: 1.4;
+  letter-spacing: .5px;
 }
 
 #portfolio {
@@ -54,18 +51,31 @@ footer {
 #portfolio h2 {
   margin-bottom: 30px;
   font-family: Lato, sans-serif;
-  font-size: 1.8em;
+  font-size: 1.4em;
+  color: #475970;
+}
+
+#animationwork {
+  padding: 20px 50px;
+  text-align: left;
+}
+
+#animationwork h2 {
+  margin-bottom: 50px;
+  margin-bottom: 2px;
+  font-family: Lato, sans-serif;
+  font-size: 1.4em;
   color: #475970;
 }
 
 /* ====== GALLERY GRID ====== */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 20px;
 }
 
-.gallery2 {
+.gallery_fixed {
   display: flex;
   flex-direction: column;
   gap: 20px; /* vertical space between rows */
@@ -73,32 +83,68 @@ footer {
 
 .row {
   display: flex;
-  gap: 16px; /* space between images in a row */
+  gap: 20px; /* space between images in a row */
 }
 /* First row: taller images */
 .row-large .portfolio-item img {
   height: 300px; /* taller images */
-  width: auto;    /* keep aspect ratio */
+  height: 100%;         /* fills parent */
+  object-fit: cover;    /* crops but keeps aspect ratio */
   display: block;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
 }
 
 .row-medium .portfolio-item img {
   height: 270px; /* shorter than first row */
-  width: auto;
+  height: 100%;         /* fills parent */
+  object-fit: cover;    /* crops but keeps aspect ratio */
   display: block;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
 }
 
 .row-small .portfolio-item img {
   height: 200px; /* shorter than first row */
-  width: auto;
+  height: 100%;         /* fills parent */
+  object-fit: cover;    /* crops but keeps aspect ratio */
   display: block;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
 }
+
+.row-set .portfolio-item {
+  flex: 1;              /* share available space equally */
+  overflow: hidden;     /* hide cropped edges */
+}
+
+.row-set .portfolio-item img {
+  width: 100%;
+  height: 100%;         /* fills parent */
+  object-fit: cover;    /* crops but keeps aspect ratio */
+  display: block;
+}
+
+
+.portfolio-item_main {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+.portfolio-item_main a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-item_main img {
+  width: 100%;
+  height: 300; 
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-item_main:hover img {
+  transform: scale(1.1);
+}
+
 .portfolio-item {
   position: relative;
   overflow: hidden;
@@ -120,8 +166,18 @@ footer {
   transition: transform 0.4s ease;
 }
 
-.portfolio-item:hover img {
-  transform: scale(1.1);
+.crop-16x9 {
+  aspect-ratio: 16 / 9;   /* force a 16:9 box */
+  width: 100%;            /* full width of container */
+  overflow: hidden;       /* hide cropped parts */
+  border-radius: 8px;
+}
+
+.crop-16x9 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* crop while keeping aspect ratio */
+  display: block;
 }
 
 /* Overlay text on hover */
@@ -135,6 +191,10 @@ footer {
   text-align: left;
   opacity: 0;
   transition: opacity 0.4s ease;
+}
+
+.portfolio-item_main:hover .overlay {
+  opacity: 1;
 }
 
 .portfolio-item:hover .overlay {
@@ -155,4 +215,39 @@ footer {
   color: #ffcc00;
   text-decoration: none;
   font-weight: bold;
+}
+
+.back-link {
+  text-align: Left;
+  margin:15px 50px;
+}
+
+.back-link a {
+  color: #7a8a99;        /* change color as desired */
+  text-decoration: none;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  margin: 15px 50px;
+  padding: 0px 0px;
+  font-size: 0.8rem;
+  background-color: #f0f0f0; /* optional, to separate footer */
+}
+
+footer a.footer-link {
+  color: #0077cc;      /* change this to whatever color you like */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer p {
+  margin: 10px 0px;
+  padding: 10px 0px;
+  color: #666;          /* subtle gray for copyright */
+  font-size: 0.8rem;
 }
